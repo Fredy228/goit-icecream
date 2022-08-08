@@ -319,9 +319,10 @@ transform: translateY(-50%);
 }
 
 .products__btn-svg{
-    
-    @media screen and (min-width:768px) {
+    background-color: inherit;
+    @media screen and (min-width:768px) and (max-width:1000px) {
         margin-top: 32px;
     }
   
 }
+
