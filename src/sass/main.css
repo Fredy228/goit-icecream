@@ -1020,16 +1020,42 @@ body.no-scroll {
 }
 .advantages__list {
   list-style: none;
-  display: flex;
-  justify-content: flex-start;
+}
+@media screen and (min-width: 768px) {
+  .advantages__list {
+    display: flex;
+    justify-content: flex-start;
+  }
 }
 .advantages__item:nth-child(1) {
   display: block;
-  margin-right: 115px;
+}
+@media screen and (min-width: 768px) {
+  .advantages__item:nth-child(1) {
+    margin-right: 115px;
+  }
 }
 .advantages__item:nth-child(2) {
   display: block;
-  margin-right: 80px;
+}
+@media screen and (min-width: 768px) {
+  .advantages__item:nth-child(2) {
+    margin-right: 80px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
 
 .gallery__inner {
