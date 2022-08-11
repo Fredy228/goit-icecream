@@ -6,8 +6,19 @@
 
 .footer__content{
   display: flex;
+
+  @media screen and (min-width:320px) {
+  
+  flex-direction: column;
+  gap:40px;
+  }
+  
+  @media screen and (min-width:768px) {
+  flex-direction: row;
   justify-content: space-between;
   padding: 60px 0;
+}
+
 }
 
 .footer__text {
@@ -49,11 +60,29 @@
 
 .footer__text--normal {
      
+  @media screen and (min-width: 320px) {
+
+    display: flex;
+    width: 232px;
+
+    font-size: 18px;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    
   display: flex;
   width: 340px;
   
   font-size: 26px;
-      
+  }
+
+  @media screen and (min-width: 1200px) {
+    
+  display: flex;
+  width: 474px;
+  
+  font-size: 30px;
+  }
 }
 
 
@@ -104,7 +133,6 @@
   // margin-right: 20px;
   // margin-left: auto;
 
-
   &--text {
     font-family: 'DM Sans';
     font-style: normal;
@@ -132,7 +160,6 @@
   }
 }
 
-
 .footer__inner {
   // display: flex;
   // justify-content: space-between;
@@ -144,20 +171,6 @@
   }
 }
 
-.footer__group {
-  // display: flex;
-  // flex-direction: column;
-  // align-items: flex-end;
-}
-
-.footer__copyright {
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 152%;
-  text-align: center;
-  color: #907E82;
-}
-
 .socials__icon:focus,
 .socials__icon:hover {
   fill: var(--color-general);
@@ -166,17 +179,21 @@
 // Footer Copyright styles
 
 .footer__copyright {
-  font-family: 'DM Sans';
-  font-style: normal;
+  text-align: center;
+  
   font-weight: 700;
   font-size: 14px;
   line-height: 152%;
-  /* or 21px */
-
-  text-align: center;
-
-  color: #907e82;
-
+  color: #907E82;
+  font-family: 'DM Sans';
+  font-style: normal;
+ 
+  @media screen and (max-width: 320px) {
+    
+  max-width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  }
   &::before {
     content: '';
     display: inline-block;
@@ -188,7 +205,13 @@
 .content {
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
+  gap: 40px;
+  
+  @media screen and (min-width: 768px) {
+    
+
   justify-content: space-between;  
   align-items: flex-end;
+  }  
 }
-
