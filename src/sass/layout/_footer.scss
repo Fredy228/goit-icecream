@@ -33,12 +33,13 @@
 
   color: #ffa5ba;
 
-  @media screen and (min-width: 1200px) {
-    max-width: 474px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+      max-width: 340px;
   }
 
-  @media screen and (min-width: 768px) {
-      max-width: 340px;
+  @media screen and (min-width: 1200px) {
+    max-width: 480px;
   }
 
 
@@ -46,15 +47,26 @@
     display: inline-block;
     margin-top: 16px;
 
-    font-family: 'Titan One';
+    font-family: var(--font-second);
     font-style: normal;
     font-weight: 400;
-    font-size: 56px;
-    line-height: 39px;
+    font-size: 34px;
+    line-height: 1.15;
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: #d41443;
+
+    @media screen and (min-width: 768px) {
+      font-size: 48px;
+      line-height: 1.15;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 56px;
+      line-height: 1.13;
+    
+    }
   }  
 }
 
@@ -89,7 +101,7 @@
 // Footer Socials Icons Styles
 
 .socials {
-  fill: #fea5bb;
+
 
   display: flex;
   gap: 30px;
@@ -115,6 +127,7 @@
 }
 
 .socials__link {
+    fill: #fea5bb;
   &:hover {
     fill: #d41443;
   }
