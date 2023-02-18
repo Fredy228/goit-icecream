@@ -1,50 +1,12 @@
-(() => {
-    const refs = {
-      openCardBtn: document.querySelector("[data-card1-open]"),
-      closeCardBtn: document.querySelector("[data-card1-close]"),
-      cardFront: document.querySelector("[data-card1-front]"),
-      cardBack: document.querySelector("[data-card1-back]"),
-    };
-  
-    refs.openCardBtn.addEventListener("click", toggleModal);
-    refs.closeCardBtn.addEventListener("click", toggleModal);
-  
-    function toggleModal() {
-      refs.cardFront.classList.toggle("is-rotate");
-      refs.cardBack.classList.toggle("is-rotate");
-    }
-  })();
+const cardFlip = document.querySelectorAll('[data-card-flip]');
+const cardBtn = document.querySelectorAll('[data-card-btn]');
 
-(() => {
-    const refs = {
-      openCardBtn: document.querySelector("[data-card2-open]"),
-      closeCardBtn: document.querySelector("[data-card2-close]"),
-      cardFront: document.querySelector("[data-card2-front]"),
-      cardBack: document.querySelector("[data-card2-back]"),
-    };
-  
-    refs.openCardBtn.addEventListener("click", toggleModal);
-    refs.closeCardBtn.addEventListener("click", toggleModal);
-  
-    function toggleModal() {
-      refs.cardFront.classList.toggle("is-rotate");
-      refs.cardBack.classList.toggle("is-rotate");
-    }
-  })();
+cardBtn.forEach(item => {
+  item.addEventListener('click', toggleClass);
+});
 
-(() => {
-    const refs = {
-      openCardBtn: document.querySelector("[data-card3-open]"),
-      closeCardBtn: document.querySelector("[data-card3-close]"),
-      cardFront: document.querySelector("[data-card3-front]"),
-      cardBack: document.querySelector("[data-card3-back]"),
-    };
-  
-    refs.openCardBtn.addEventListener("click", toggleModal);
-    refs.closeCardBtn.addEventListener("click", toggleModal);
-  
-    function toggleModal() {
-        refs.cardFront.classList.toggle("is-rotate");
-        refs.cardBack.classList.toggle("is-rotate");
-    }
-  })();
+function toggleClass(event) {
+  event.currentTarget.parentNode.children[0].classList.toggle('is-rotate');
+  event.currentTarget.parentNode.children[2].classList.toggle('is-rotate');
+  event.target.classList.toggle('is-rotate');
+}
