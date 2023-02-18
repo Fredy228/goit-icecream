@@ -1,0 +1,2 @@
+var cardFlip=document.querySelectorAll("[data-card-flip]"),cardBtn=document.querySelectorAll("[data-card-btn]");function toggleClass(t){t.currentTarget.parentNode.children[0].classList.toggle("is-rotate"),t.currentTarget.parentNode.children[2].classList.toggle("is-rotate"),t.target.classList.toggle("is-rotate")}cardBtn.forEach((function(t){t.addEventListener("click",toggleClass)}));
+//# sourceMappingURL=index.2d0b02c3.js.map
